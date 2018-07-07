@@ -1,0 +1,16 @@
+<form action="/songs/<%=@song.slug%>" method="POST">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+  <p>Song Name: <%=@song.name%></p><input type="text" name="Name" placeholder="Name">
+
+  <p>Artist Name: <%=@song.artist.name%></p><input type="text" name="Artist Name" placeholder="Artist Name">
+
+  <% Genre.all.each do |genre| %>
+  <p><%=genre.name%></p> <input id="<%= genre.name %>" type="checkbox" name="genres[]" value="<%= genre.id %>">
+  <% end %>
+
+  <input type="submit" value="Save">
+</form>
+
+<% if flash.has?(:message) %>
+  <%= flash[:message] %>
+<% end %>
