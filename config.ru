@@ -7,4 +7,9 @@ if ActiveRecord::Base.connection.migration_context.needs_migration?
 end
 
 use Rack::MethodOverride
+
+use ArtistsController
+use GenresController
+use SongsController
+# use Slugifiable
 run ApplicationController
