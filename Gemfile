@@ -12,10 +12,12 @@ gem "sinatra"
 gem "sinatra-activerecord", require: "sinatra/activerecord"
 gem "sqlite3"
 gem "thin"
+# gem 'rack-flash3'
 
 group :test do
   gem "capybara"
   gem "database_cleaner", git: "https://github.com/bmabey/database_cleaner.git"
   gem "rack-test"
   gem "rspec"
+  gem "tux"
 end
