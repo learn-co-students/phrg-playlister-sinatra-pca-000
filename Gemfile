@@ -15,7 +15,7 @@ gem "thin"
 
 group :test do
   gem "capybara"
-  gem "database_cleaner", git: "https://github.com/bmabey/database_cleaner.git"
+  gem "database_cleaner"
   gem "rack-test"
   gem "rspec"
 end
