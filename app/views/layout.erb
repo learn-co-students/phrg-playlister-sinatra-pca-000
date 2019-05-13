@@ -3,7 +3,9 @@
   <head>
     <title></title>
   </head>
-
+  <% if flash.has?(:message) %>
+        <%= flash[:message] %>
+      <% end %>
   <body>
     <%= yield %>
   </body>
